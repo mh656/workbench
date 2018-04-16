@@ -1,0 +1,506 @@
+/*
+  ========================================
+  Full Reset
+  
+  v2.0 | 20110126
+  License: none (public domain)
+  ========================================
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*
+  ========================================
+  Box-sizing
+  ========================================
+*/
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*
+  ========================================
+  Font declaration
+  ========================================
+*/
+@font-face {
+    font-family: Atlas-Grotesk-Regular;
+    src: url("../fonts/AtlasGrotesk-Regular.otf");
+}
+
+/*
+  ========================================
+  Fixed Viewport Check
+  ========================================
+*/
+#viewportwidth{
+    font-family: "arial";
+    font-size: 14px;
+}
+
+/*
+  ========================================
+  Body
+  ========================================
+*/
+body {
+    background-color: rgba(255,255,255,1);
+    
+    font: 12px/15px Atlas-Grotesk-Regular, monospace;
+    color: #000;
+    word-spacing: -0.05em;
+    letter-spacing: 0em;
+}
+
+/*
+  ========================================
+  Grid
+  ========================================
+*/
+nav {
+    padding: 2%;
+    margin: 0 0 2% 0;
+}
+
+nav li {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+section {
+    padding: 0;
+}
+
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0.5% 0.5% 0.5% 0.5%;
+}
+
+.container {
+    background-color: PaleVioletRed;
+    
+    width: 95vw;
+    height: 95vh;
+    margin: 1% auto;
+    z-index: 5;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px PaleVioletRed;
+    -moz-box-shadow: 0px 0px 28px 22px PaleVioletRed;
+    box-shadow: 0px 0px 28px 22px PaleVioletRed;
+}
+
+.mediumcontainer {
+    background-color: Orange;
+    
+    width: 75vw;
+    
+    margin: 5% auto;
+    padding: 3%;
+    z-index: 5;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px Orange;
+    -moz-box-shadow: 0px 0px 28px 22px Orange;
+    box-shadow: 0px 0px 28px 22px Orange;
+}
+
+.section-l {
+    position: relative;
+    display: inline-block;
+    float: left;
+    
+    width: 46%;
+    height: 37vh;
+    margin: 5vh 2% 5vh 2%;
+    
+    text-align: center;
+    vertical-align: middle;
+    background-color: Linen;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px Linen;
+    -moz-box-shadow: 0px 0px 28px 22px Linen;
+    box-shadow: 0px 0px 28px 22px Linen;
+}
+
+.section-r {
+    position: relative;
+    display: inline-block;
+    float: right;
+    
+    width: 46%;
+    height: 37vh;
+    margin: 5vh 2% 5vh 2%;
+    
+    text-align: center;
+    vertical-align: middle;
+    background-color: Linen;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px Linen;
+    -moz-box-shadow: 0px 0px 28px 22px Linen;
+    box-shadow: 0px 0px 28px 22px Linen;
+}
+
+_::-webkit-full-page-media, _:future, :root .saf-gra-container { box-shadow: 0px 0px 24px 25px PaleVioletRed; }
+_::-webkit-full-page-media, _:future, :root .saf-gra-minicontainer { box-shadow: 0px 0px 24px 25px Linen; }
+_::-webkit-full-page-media, _:future, :root .saf-gra-medcontainer { box-shadow: 0px 0px 24px 25px Orange; }
+
+/*
+  ========================================
+  Typography
+  ========================================
+*/
+nav {
+    font: 6.5em/1.1em Atlas-Grotesk-Regular, monospace;
+    letter-spacing: -0.05em;
+}
+
+nav li a span.dc {
+    font-family: "arial";
+}
+
+br {
+}
+
+p {
+}
+
+
+/*
+  ========================================
+  Links
+  ========================================
+*/
+a{
+    cursor: pointer;
+}
+
+nav li a{
+    color: #000;
+    text-decoration: none;
+    
+    background: rgba(255, 201, 100,1);
+    
+    -webkit-border-radius: 17px;
+    -moz-border-radius: 17px;
+    border-radius: 17px;
+}
+
+nav li a:hover {
+    color: #000;
+    text-decoration: none;
+    
+    background: dodgerblue;
+    
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px dodgerblue;
+    -moz-box-shadow: 0px 0px 28px 22px dodgerblue;
+    box-shadow: 0px 0px 28px 22px dodgerblue;
+}
+
+/*
+  ========================================
+  Images
+  ========================================
+*/
+img{
+    width: auto;
+    height: 100%;
+    vertical-align: middle;
+    
+    image-rendering: crisp-edges;
+    mix-blend-mode: multiply; 
+}
+
+
+/*
+  ========================================
+  Slick Carousel
+  ========================================
+*/
+.single-item-gallery {
+    width: 100%;
+    margin: 3vh 0 3vh 0;
+}
+
+.single-item-gallery:before,
+.single-item-gallery:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 10%;
+    height: 100%;
+    
+    content: "";
+    pointer-events: none; /*makes the linkes behind clickable.*/
+}
+.single-item-gallery:before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
+}
+.single-item-gallery:after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255, 165, 0, 1), rgba(255, 165, 0, 0));
+}
+
+.artframe {    
+    width: 100%;
+}
+
+.artframe img{
+    width: 75%;
+    margin: 0 auto 3% auto;
+}
+
+.one {border: 18px solid rgb(253, 253, 74); box-shadow: 10px 10px 20px #ff8c19;}
+.two {border: 18px solid #63ff56; box-shadow: 10px 10px 20px rgba(190, 9, 134, 0.5);}
+.three {border: 18px solid #5f52ff; box-shadow: 10px 10px 20px #aa5500;}
+.four {border: 18px solid #ac0028; box-shadow: 10px 10px 20px rgba(190, 0, 0, 0.5);}
+
+
+.click-instance {
+    width: inherit;
+    
+    cursor: pointer;
+}
+
+.single-item-gallery, .single-item-gallery *{ outline: none !important; }
+
+
+
+
+
+
+/*
+  ========================================
+  Media Queries Tablets
+  ========================================
+*/
+@media all and (max-width: 960px) {
+    /*Font**************/
+    nav {
+        font: 4.8em/1.1em Atlas-Grotesk-Regular, monospace;
+        letter-spacing: -0.05em;
+    }
+    /*Grid**************/
+    .container {
+        background-color: PaleVioletRed;
+
+        width: 95vw;
+        height: auto;
+        margin: 1% auto;
+        padding: 0.1%;
+        z-index: 5;
+    }
+    .section-l {
+        background-color: linen;
+
+        position: relative;
+        display: block;
+        float: none;
+
+        width: 90%;
+        height: 35vw;
+        
+        margin: 60px auto;
+        
+        
+    }
+    .section-r {
+        background-color: linen;
+
+        position: relative;
+        display: block;
+        float: none;
+
+        width: 90%;
+        height: 35vw;
+        
+        margin: 60px auto;
+    }
+    
+    /*Images**************/
+    img{
+        height: 100%;
+        vertical-align: middle;
+        
+        image-rendering: none;
+    }
+    
+    
+    /*Slick carousel**************/
+    .artframe {    
+        width: 100%;
+    }
+
+    .artframe img{
+        width: 85%;
+        margin: 0 auto 3% auto;
+    }
+    
+    .one {border: 10px solid rgb(253, 253, 74); box-shadow: 5px 5px 10px #ff8c19;}
+    .two {border: 10px solid #63ff56; box-shadow: 5px 5px 10px rgba(190, 9, 134, 0.5);}
+    .three {border: 10px solid #5f52ff; box-shadow: 5px 5px 10px #aa5500;}
+    .four {border: 10px solid #ac0028; box-shadow: 5px 5px 10px rgba(190, 0, 0, 0.5);   
+}
+    
+/*
+  ========================================
+  Media Queries Phone Landscape
+  ========================================
+*/
+    
+@media all
+    and (max-device-width: 700px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: landscape) {
+          
+    .section-l,
+    .section-r {
+        height: 70vh;
+    }
+}
+
+/*
+  ========================================
+  Media Queries Phones
+  ========================================
+*/
+
+@media all and (max-width: 400px) {
+    /*Grid**************/
+    nav {
+        margin-top: 20px;
+    }
+    
+    nav li {
+        display: block;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .mediumcontainer {
+        background-color: Orange;
+        
+        margin-bottom: 40px;
+        width: 85vw;
+    }
+    
+    .section-l,
+    .section-r {
+        height: 30vh;
+    }
+    
+    
+    /*Font**************/
+    nav {
+        font: 4.8em/1.17em Atlas-Grotesk-Regular, monospace;
+        letter-spacing: -0.05em;
+    }
+    
+    /*Images**************/
+    img{
+        width: 100%;
+        height: auto;
+        vertical-align: middle;
+        image-rendering: none;
+    }
+    
+    /*Slick carousel**************/
+        .single-item-gallery:before,
+        .single-item-gallery:after {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        width: 8%;
+        height: 100%;
+
+        content: "";
+        pointer-events: none; /*makes the linkes behind clickable.*/
+    }
+    
+    .one {border: 8px solid rgb(253, 253, 74); box-shadow: 2px 2px 6px #ff8c19;}
+    .two {border: 8px solid #63ff56; box-shadow: 2px 2px 6px rgba(190, 9, 134, 0.5);}
+    .three {border: 8px solid #5f52ff; box-shadow: 2px 2px 6px #aa5500;}
+    .four {border: 8px solid #ac0028; box-shadow: 2px 2px 6px rgba(190, 0, 0, 0.5);}
+}
+    
+/*
+  ========================================
+  Media Queries Phone Portrait
+  ========================================
+*/
+    
+@media all
+    and (max-device-width: 400px) 
+    and (-webkit-min-device-pixel-ratio: 2)
+    and (orientation: portrait) {
+          
+    .section-l,
+    .section-r {
+        height: 37vh;
+    }
+}

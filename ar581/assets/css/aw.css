@@ -1,0 +1,222 @@
+/*
+  ========================================
+  Canvas
+  ========================================
+*/
+
+.canvas {
+    display: block;
+    position: relative;
+    background-color: rgb(240,240,240);
+    border: solid 20px rgb(245,245,245);
+    box-shadow: 15px 15px 25px rgba(290, 202, 159, 0.78);
+    margin: 60px auto;
+    padding: 20px;
+    width: 900px;
+    height: 600px;
+}
+
+/*
+  ========================================
+  Character
+  ========================================
+*/
+
+.face {
+     position: absolute;
+    top:50px; left: 400px;
+    width: 80px;
+    height: 80px;
+    background: #FFD9B8;
+    border-radius: 100% 100% 100% 100%;
+}
+.eye1 {
+    position: absolute;
+    top:80px; left: 416px;
+    width: 10px;
+    height: 10px;
+    background: #000000;
+    border-radius: 100%
+    
+}
+
+.eye2 {
+    position: absolute;
+    top:80px; left: 456px;
+    width: 10px;
+    height: 10px;
+    background: #000000;
+    border-radius: 100%
+}
+
+
+.ear1 {
+    position: absolute;
+    top: 78px;
+    left: 390px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #FFD9B8;
+    border-radius: 50% 30% 0 70%
+    }
+.ear2 {
+    position: absolute;
+    top: 78px;
+    left: 460px;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    background: #FFD9B8;
+    border-radius: 0 50% 70% 0%
+}
+.nose {
+    position: absolute;
+    top:89px; left: 437px;
+    width: 8px;
+    height: 18px;
+    background: #CFB095;
+    border-radius: 40% 40% 40% 40% 
+}
+.neck {
+     position: absolute;
+    top:124px; left: 433px;
+    width: 18px;
+    height: 25px;
+    background: #FFD9B8;
+    border-radius: 
+}
+
+.leg1 {
+    position: absolute;
+    top: 298px;
+    left: 459px;
+    width: 20px;
+    height: 200px;
+    background: #CEAE64;
+}
+.leg2 {
+    position: absolute;
+    top: 298px;
+    left: 404px;
+    width: 20px;
+    height: 200px;
+    background: #CEAE64;
+}
+
+.body {
+    position: absolute;
+    top:259px; left: 404px;
+    height:50px;
+    width:75px;
+    background: #CEAE64
+    
+	
+}
+.foot1 {
+   position: absolute;
+    top: 498px;
+    left: 394px;
+    width: 30px;
+    height: 5px;
+    background: #423933; 
+}
+.foot2 {
+    position: absolute;
+    top: 498px;
+    left: 459px;
+    width: 30px;
+    height: 5px;
+    background: #423933; 
+}
+.hair1 {
+    position: absolute;
+    top:43px; 
+    left: 410px;
+    width: 80px;
+    height:30px;
+    background: #917857;
+    border-radius: 100% 100% 0% 100%;
+    transform: rotate(20deg)
+    
+}
+
+.arm1 {
+    position: absolute;
+    top: 178px;
+    left: 391px;
+    width: 15px;
+    height: 150px;
+    background: #FFD9B8;
+    transform: rotate(5deg);
+}
+.arm2 {
+     position: absolute;
+    top: 179px;
+    left: 478px;
+    width: 15px;
+    height: 150px;
+    background: #FFD9B8;
+    transform: rotate(-5deg);
+}
+.sleeve1 {
+    position: absolute;
+    top: 159px;
+    left: 404px;
+    width: 75px;
+    height: 115px;
+    background: #2A4A3E;
+}
+
+.belt1 {
+    position: absolute;
+    top: 265px;
+    left: 410px;
+    width: 15px;
+    height: 15px;
+    background: #705C43;
+}
+.belt2 {
+   position: absolute;
+    top: 265px;
+    left: 435px;
+    width: 15px;
+    height: 15px;
+    background: #705C43; 
+}
+.belt3 {
+    position: absolute;
+    top: 265px;
+    left: 460px;
+    width: 15px;
+    height: 15px;
+    background: #705C43;
+}
+.hair2 {
+    position: absolute;
+    top: 43px;
+    left:397px;
+    width: 20px;
+    height:40px;
+    background: #917857;
+    border-radius: 100% 0% 80% 10%;
+    transform: rotate(5deg)
+}
+.rsleeve {
+    position: absolute;
+    top: 143px;
+    left:397px;
+    width: 50px;
+    height:40px;
+    background: #2A4A3E;
+    border-radius: 60% 0 0 0
+}
+.lsleeve {
+    position: absolute;
+    top: 143px;
+    left: 437px;
+    width: 50px;
+    height: 40px;
+    background: #2A4A3E;
+    border-radius: 0 60% 0 0
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title>ar581 Web Design of Spring 2018</title>
+        <link rel="stylesheet" type="text/css" href="assets/slick-1-8-0/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/slick-1-8-0/slick/slick-theme.css"/>
+        <link rel="stylesheet" href="assets/css/ar581-main.css">
+    </head>
+	<body>
+        <div class="wrapper">
+            <nav>
+                <ul>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">C</span>laire Adamson</a></li>
+                    <li><a href="assignment2/index.html" class="saf-gra-nav"><span class="dc">C</span>iaran Brandin</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">Z</span>iqi Cai</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">B</span>randon Chen</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">M</span>elanie Hubbard</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">D</span>eidra Higgins</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">C</span>harlotte Kershaw</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">E</span>ugene Kim</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">M</span>organ Lee</a></li>
+                    <li><a href="assignment1/index.html" class="saf-gra-nav"><span class="dc">N</span>ikita Singh</a></li>
+                    <li><a href="https://alicjaw.github.io/interactive/" class="saf-gra-nav" target="_blank"><span class="dc">A</span>licja Wisniowska</a></li>
+                </ul>
+            </nav>
+            <section class="container saf-gra-container">
+                <section class="section-l saf-gra-minicontainer">
+                    <a href="https://alicjaw.github.io/interactive/25Variations/" target="_blank"><img src="assets/images/a1-alicja.jpg"></a>
+                </section>
+                <section class="section-r saf-gra-minicontainer">
+                    <a href="https://morgandlee.github.io/interactive/25variations/" target="_blank"><img src="assets/images/a1-morgan.jpg"></a>
+                </section>
+                <section class="section-l saf-gra-minicontainer">
+                     <a href="https://naginichen.github.io/interactive/Navigation.html" target="_blank"><img src="assets/images/a1-brandon.jpg"></a>
+                </section>
+                <section class="section-r saf-gra-minicontainer">
+                    <a href="https://dorothycaikk.github.io/interactive/25-variations/index.html" target="_blank"><img src="assets/images/a1-ziqi.jpg"></a>
+                </section>
+            </section>
+            <section class="mediumcontainer saf-gra-medcontainer">
+                <div class="single-item-gallery">
+                    <div class="artframe">
+                        <div class="click-instance">
+                            <img src="assets/images/morgan.png" class="one">
+                        </div>
+                    </div>
+                    <div class="artframe">
+                        <div class="click-instance">
+                            <img src="assets/images/brandon.png" class="two">
+                        </div>
+                    </div>
+                    <div class="artframe">
+                        <div class="click-instance">
+                            <img src="assets/images/alicja.png" class="three">
+                        </div>
+                    </div>
+                    <div class="artframe">
+                        <div class="click-instance">
+                            <img src="assets/images/eugene.png" class="four">
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script type="text/javascript" src="assets/slick-1-8-0/slick/slick.min.js"></script>
+        <script type="text/javascript" src="assets//js/jquery.browser.js"></script>
+        <script>
+            $(document).ready(function(){
+                $('.single-item-gallery').slick();
+            });
+
+            var $slider = $(".single-item-gallery").slick({
+                dots: true,
+                arrows: false,
+                focusOnSelect: false
+            })
+
+            $slider.find(".click-instance").on("click", function(){
+                $slider.slick("slickNext");
+            });      
+
+            
+            
+            var lastPick;
+            var rand;
+
+            function randomColor() {
+                var back = ["green","blue","Gainsboro","yellow","orange","purple","Magenta","LimeGreen","DarkViolet","MediumSlateBlue","DarkSeaGreen","DarkRed","RoyalBlue","Pink","Coral","OrangeRed"];
+                rand = back[Math.floor(Math.random() * back.length)];
+                rand==lastPick?randomColor():rand;
+                lastPick = rand;
+                return rand;
+            }
+            
+            $('nav li a').each(function() {
+                $(this).css({
+                    'background-color' : randomColor(),
+                    'box-shadow' : '0px 0px 28px 28px ' + rand
+                });
+                $(this).attr("id", rand);
+            });
+            
+            
+            $('nav li a').hover(function(){
+                $(this).css({
+                    'background-color' : 'blue',
+                    'box-shadow' : '0px 0px 28px 28px blue'
+                });
+            }, function(){
+                colorID = $(this).attr("id");
+                $(this).css({
+                    'background-color' : colorID,
+                    'box-shadow' : '0px 0px 28px 28px ' + colorID
+                });
+            }); 
+
+            $('nav li a span.dc').each(function() {
+                var dropcap = ["courier","courier new","chalkboard","futura","ocr a std","signpainter"];
+                var dc_rand = dropcap[Math.floor(Math.random() * dropcap.length)];
+                $(this).css({
+                    'font-family' : dc_rand,
+                    'font-size' : '115%'
+                });    
+
+                if (dc_rand === 'courier new') {
+                    $(this).css({
+                        'font-size' : '125%'
+                    });
+                }
+
+                if (dc_rand === 'futura') {
+                    $(this).css({
+                        'font-size' : '95%'
+                    });
+                }
+
+                if (dc_rand === 'ocr a std') {
+                    $(this).css({
+                        'font-size' : '95%'
+                    });
+                }
+
+                if (dc_rand === 'signpainter') {
+                    $(this).css({
+                        'padding-right' : '0.5%'
+                    });
+                }
+            });
+            
+           
+            var rtime;
+            var timeout = false;
+            var delta = 200;
+            
+            $(window).resize(function() {
+            rtime = new Date();
+                if (timeout === false) {
+                    timeout = true;
+                    setTimeout(resizeend, delta);
+                    $('.artframe img').css({
+                        '-webkit-filter' : 'blur(10px)',
+                        'opacity' : '0.6'
+                    });
+                }
+            });
+
+            function resizeend() {
+                if (new Date() - rtime < delta) {
+                    setTimeout(resizeend, delta);
+                } else {
+                    timeout = false;
+                    //alert('Done resizing');
+                    $('.artframe img').css({
+                        '-webkit-filter' : 'none',
+                        'opacity' : '1'
+                    });
+                }               
+            }   
+            
+            /*
+            $(function(){
+                // Create debug element
+                $("body").append("<div style='position:fixed;top:5px;left:5px;' id='viewportwidth'></div>");
+
+                // Set contents on resizing window
+                $(window).resize(function(){$("#viewportwidth").html($(window).width());});
+
+                // Trigger resize event
+                $(window).resize();
+            });
+            */
+            
+        </script>
+    </body>
+</html>
