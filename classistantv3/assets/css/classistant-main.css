@@ -69,9 +69,26 @@ table {
   ========================================
 */
 @font-face {
-    font-family: Atlas-Grotesk-Regular;
-    src: url("../fonts/AtlasGrotesk-Regular.otf");
+    font-family: GT-America;
+    src: url("../fonts/GT-America-Standard-Regular.ttf");
 }
+
+@font-face {
+    font-family: NewMonoSpaceMono-Italic;
+    src: url("../fonts/NewMonoSpaceMono-Italic.otf");
+}
+
+@font-face {
+    font-family: NewMonoLetterGothicStd-Medium;
+    src: url("../fonts/NewMonoLetterGothicStd-Medium.otf");
+}
+
+@font-face {
+    font-family: NewMonoCourierNew-Regular;
+    src: url("../fonts/NewMonoCourierNew-Regular.otf");
+}
+
+
 
 /*
   ========================================
@@ -108,6 +125,7 @@ nav {
 }
 
 nav li {
+    position: relative;
     display: block;
     text-align: center;
     margin-bottom: 30px;
@@ -124,13 +142,12 @@ section {
 }
 
 .container {
-    background-color: PaleVioletRed;
-    
     width: 95vw;
     height: 95vh;
     margin: 1% auto;
     z-index: 1;
     
+    background-color: PaleVioletRed;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -141,14 +158,12 @@ section {
 }
 
 .mediumcontainer {
-    background-color: Silver;
-    
     width: 85vw;
-    
     margin: 5% auto;
     padding: 3%;
     z-index: 1;
     
+    background-color: Silver;
     -webkit-border-radius: 15px;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -158,8 +173,50 @@ section {
     box-shadow: 0px 0px 28px 22px Silver;
 }
 
+.quartercontainer {
+    display: relative;
+    float: left;
+    
+    width: 45vw;
+    margin: 10vh 2% 5vh 4%;
+    padding: 2%;
+    z-index: 1;
+    
+    background-color: Gainsboro;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    
+    -webkit-box-shadow: 0px 0px 28px 22px Gainsboro;
+    -moz-box-shadow: 0px 0px 28px 22px Gainsboro;
+    box-shadow: 0px 0px 28px 22px Gainsboro;
+}
+
+.quarterfigure {
+    display: relative;
+    float: right;
+    
+    width: 30vw;
+    margin: 20vh 6% 5vh 2%;
+    z-index: 1;
+    
+    background-color: transparent;
+}
+
 .containerimage {
+    clear: both;
+    
     width: 70vw;
+    margin: 0 auto;
+    padding: 3%;
+    
+    background-color: white;
+}
+
+.containerimagesmall {
+    clear: both;
+    
+    width: 60vw;
     margin: 0 auto;
     padding: 3%;
     
@@ -258,8 +315,9 @@ _::-webkit-full-page-media, _:future, :root .saf-gra-medcontainer { box-shadow: 
   ========================================
 */
 nav {
-    font: 5.5em/1.2em Atlas-Grotesk-Regular, monospace;
-    letter-spacing: -0.055em;
+    font: 4.9vw/6.2vw GT-America, sans-serif;
+    letter-spacing: -0.045em;
+    
 }
 
 br {
@@ -276,17 +334,14 @@ a{
 }
 
 nav li a{
+    
     color: #000;
     text-decoration: none;
-    
     background: white;
     
-    -webkit-border-radius: 17px;
-    -moz-border-radius: 17px;
-    border-radius: 17px;
-}
-
-nav li a:hover {
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
 }
 
 /*
@@ -313,7 +368,7 @@ img.multiply{
 
 /*
   ========================================
-  Slick Carousel Calendars
+  Slick Carousel Horizontal
   ========================================
 */
 .single-item-gallery {
@@ -357,11 +412,43 @@ img.multiply{
 
 .slick-dots li
 {
-    margin: 0 4px;
+    margin: 0 3px;
 }
 
 .single-item-gallery, .single-item-gallery *{ outline: none !important; }
 
+/*
+  ========================================
+  Slick Carousel Vertical
+  ========================================
+*/
+.v-single-item-gallery {
+    width: 100%;
+    margin: 3vh 0 3vh 0;
+}
+
+.v-single-item-gallery:before,
+.v-single-item-gallery:after {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    width: 8%;
+    height: 100%;
+    
+    content: "";
+    pointer-events: none; /*makes the links behind clickable.*/
+}
+
+.v-single-item-gallery:before {
+    left: 0;
+    background: linear-gradient(to right, rgba(220,220,220, 1), rgba(220,220,220, 0));
+}
+.v-single-item-gallery:after {
+    right: 0;
+    background: linear-gradient(to left, rgba(220,220,220, 1), rgba(220,220,220, 0));
+}
+
+.v-single-item-gallery, .v-single-item-gallery *{ outline: none !important; }
 
 
 /*

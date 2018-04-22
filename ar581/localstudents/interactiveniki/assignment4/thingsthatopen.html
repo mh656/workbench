@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=”utf-8”>
+        <link rel="stylesheet" href="assets/css/thingsthatopen.css">
+        <title>thingsthatopen</title>
+    </head>
+    
+      <h1>things that open </h1>
+	<body>
+        
+        
+        <div class="wrapper">
+            <div class="container">
+            <div class="dividers"> <p>doors</p></div>
+            <div class="dividers"> <p>elevators</p></div>
+            <div class="dividers"> <p>refrigerators </p></div>
+            <div class="dividers"> <p>drawers</p></div>
+            <div class="dividers"> <p>gates</p></div>
+            <div class="dividers"> <p>stores</p></div>
+            <div class="dividers"> <p>businesses</p></div>
+            <div class="dividers"> <p>offices</p></div>
+            <div class="dividers"> <p>closets</p></div>
+            <div class="dividers"> <p>filecabinets</p></div>
+            <div class="dividers"> <p>microwaves</p></div>
+            <div class="dividers"> <p>mouths</p></div>
+            <div class="dividers"> <p>eyes</p></div>
+            <div class="dividers"> <p>parks</p></div>
+            <div class="dividers"> <p>windows</p></div>
+            <div class="dividers"> <p>tulips</p></div>
+            <div class="dividers"> <p>chapters</p></div>
+            <div class="dividers"> <p>drawbridges</p></div>
+           
+            </div>    
+        </div>
+            
+            
+            
+            
+  
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>  
+        <script>  
+       $(function(){
+           // Create debug element
+           $("body").append("<div style='position:fixed;top:5px;left:5px;' id='viewportwidth'></div>");
+           
+           // Set contents on resizing window
+           $(window).resize(function(){$("#viewportwidth").html($(window).width());});
+           
+           // Trigger resize event
+           $(window).resize();
+       });
+       
+        
