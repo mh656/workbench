@@ -372,6 +372,15 @@ img.multiply{
   ========================================
 */
 .single-item-gallery {
+    display: none;
+}
+
+.single-item-gallery.slick-initialized {
+    display: block;
+}
+
+
+.single-item-gallery {
     width: 100%;
     margin: 3vh 0 3vh 0;
 }
