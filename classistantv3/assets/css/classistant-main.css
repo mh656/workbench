@@ -379,7 +379,6 @@ img.multiply{
     display: block;
 }
 
-
 .single-item-gallery {
     width: 100%;
     margin: 3vh 0 3vh 0;
@@ -431,6 +430,14 @@ img.multiply{
   Slick Carousel Vertical
   ========================================
 */
+.v-single-item-gallery {
+    display: none;
+}
+
+.v-single-item-gallery.slick-initialized {
+    display: block;
+}
+
 .v-single-item-gallery {
     width: 100%;
     margin: 3vh 0 3vh 0;
