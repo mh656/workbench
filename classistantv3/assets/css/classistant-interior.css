@@ -355,7 +355,6 @@ a{
 }
 
 nav li a{
-    
     color: #000;
     text-decoration: none;
     background: white;
@@ -363,6 +362,20 @@ nav li a{
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
+}
+
+/*
+  ========================================
+  Temporary logo
+  ========================================
+*/
+.templogogroup{
+    display: inline-block;
+    position: absolute;
+    min-width: 12%;
+    top: 0.5%;
+    left: 0.2%;
+    opacity: 0.8;
 }
 
 /*
@@ -465,188 +478,6 @@ img.multiply{
     border-radius: 15px;
 }
 
-/*
-  ========================================
-  Button caption toggle
-  ========================================
-*/
-.buttongroup {
-    display: inherit;
-    position: fixed;
-    
-    width: 240px;
-    top: 3%;
-    right: 2vw;
-    z-index: 100;
-}
-
-
-.switch {
-    display: inline-block;
-    position: relative;
-    float: right;
-    width: 60px;
-    height: 34px;
-    top: 3%;
-}
-
-.switch input {display:none;}
-
-.swing {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #fcf1ea;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-.swing:before {
-    position: absolute;
-    content: "";
-    height: 26px;
-    width: 26px;
-    left: 4px;
-    bottom: 4px;
-    background-color: black;
-    -webkit-transition: .4s;
-    transition: .4s;
-}
-
-input:checked + .swing {
-    background-color: SteelBlue;
-}
-
-input:focus + .swing {
-    box-shadow: 0 0 1px SteelBlue;
-}
-
-input:checked + .swing:before {
-    -webkit-transform: translateX(26px);
-    -ms-transform: translateX(26px);
-    transform: translateX(26px);
-}
-
-/* Rounded sliders */
-.swing.round { 
-    border-radius: 34px;
-}
-
-.swing.round:before {
-    border-radius: 50%;
-}
-
-/*
-  ========================================
-  Slick Carousel Horizontal
-  ========================================
-*/
-.single-item-gallery {
-    display: none;
-}
-
-.single-item-gallery.slick-initialized {
-    display: block;
-}
-
-.single-item-gallery {
-    width: 100%;
-    margin: 3vh 0 3vh 0;
-}
-
-.single-item-gallery:before,
-.single-item-gallery:after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    width: 8%;
-    height: 100%;
-    
-    content: "";
-    pointer-events: none; /*makes the links behind clickable.*/
-}
-.single-item-gallery:before {
-    left: 0;
-    background: linear-gradient(to right, rgba(192,192,192, 1), rgba(192,192,192, 0));
-}
-.single-item-gallery:after {
-    right: 0;
-    background: linear-gradient(to left, rgba(192,192,192, 1), rgba(192,192,192, 0));
-}
-
-.artframe {    
-    width: 100%;
-}
-
-.artframe img{
-    width: 83%;
-    margin: 0 auto 3% auto;
-}
-
-.click-instance {
-    width: inherit;
-    cursor: pointer;
-}
-
-.slick-dots li
-{
-    margin: 0 3px;
-}
-
-.single-item-gallery, .single-item-gallery *{ outline: none !important; }
-
-
-
-
-/*
-  ========================================
-  Slick Carousel Vertical
-  ========================================
-*/
-.v-single-item-gallery {
-    display: none;
-}
-
-.v-single-item-gallery.slick-initialized {
-    display: block;
-}
-
-.v-single-item-gallery {
-    width: 100%;
-    margin: 3vh 0 3vh 0;
-}
-
-.v-single-item-gallery:before,
-.v-single-item-gallery:after {
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    width: 8%;
-    height: 100%;
-    
-    content: "";
-    pointer-events: none; /*makes the links behind clickable.*/
-}
-
-.v-single-item-gallery:before {
-    left: 0;
-    background: linear-gradient(to right, rgba(220,220,220, 1), rgba(220,220,220, 0));
-}
-.v-single-item-gallery:after {
-    right: 0;
-    background: linear-gradient(to left, rgba(220,220,220, 1), rgba(220,220,220, 0));
-}
-
-.v-single-item-gallery .slick-dots li{
-    margin: 0 3px;
-}
-
-.v-single-item-gallery, .v-single-item-gallery *{ outline: none !important; }
-
-
     
 /*
   ======================================================================================================================== 
@@ -687,7 +518,7 @@ input:checked + .swing:before {
     
     width: inherit;
     margin: 0 auto;
-    padding: 1%;
+    padding: 1%1%;
     
     border-top: 1px solid #000000;
     background-color: none;
@@ -705,6 +536,7 @@ input:checked + .swing:before {
 }
 
 .scheduleexpand li{
+    margin-left: 15px;
     list-style-type: circle;
 }
 
@@ -733,6 +565,16 @@ nav.menu {
   Typography
   ========================================
 */
+ol li{
+    list-style-type: circle;
+    list-style-position: outside;
+    margin-left: 7%;
+}
+
+ul {
+    list-style-position: outside;
+}
+
 li{
     list-style-type: circle;
 }
@@ -1039,76 +881,6 @@ hr {
         height: 200px;
     }
     
-    /*Phone carousel**************/
-    .single-item-gallery {
-        width: 100%;
-        margin: 3vh 0 3vh 0;
-    }
-
-    .single-item-gallery:before,
-    .single-item-gallery:after {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        width: 8%;
-        height: 100%;
-
-        content: "";
-        pointer-events: none; /*makes the links behind clickable.*/
-    }
-    .single-item-gallery:before {
-        left: -1px;
-        background: linear-gradient(to right, rgba(192,192,192, 1), rgba(192,192,192, 0));
-    }
-    .single-item-gallery:after {
-        right: -1px;
-        background: linear-gradient(to left, rgba(192,192,192, 1), rgba(192,192,192, 0));
-    }
-
-    .artframe {    
-        width: 100%;
-    }
-
-    .artframe img{
-        width: 90%;
-        margin: 0 auto 6% 20px;
-    }
-
-    .click-instance {
-        width: inherit;
-        cursor: pointer;
-    }
-
-    .slick-dots li
-    {
-        width: 22px;
-    }
-    
-    .v-single-item-gallery {
-        width: 100%;
-        margin: 1vh 0 1vh 0;
-    }
-    
-    .v-single-item-gallery:before,
-    .v-single-item-gallery:after {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        width: 10%;
-        height: 100%;
-
-        content: "";
-        pointer-events: none; /*makes the links behind clickable.*/
-    }
-
-    .v-single-item-gallery:before {
-        left: 0;
-        background: linear-gradient(to right, rgba(220,220,220, 1), rgba(220,220,220, 0));
-    }
-    .v-single-item-gallery:after {
-        right: 0;
-        background: linear-gradient(to left, rgba(220,220,220, 1), rgba(220,220,220, 0));
-    }
     
     /*Font**************/
     nav {
@@ -1124,34 +896,10 @@ hr {
         image-rendering: none;
     }
     
-    /*Slick carousel**************/
-        .single-item-gallery:before,
-        .single-item-gallery:after {
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        width: 10%;
-        height: 100%;
-
-        content: "";
-        pointer-events: none; /*makes the linkes behind clickable.*/
-    }
-    
-    .slick-dots li button:before
-    {
-        font-size: 9px;
-        margin: 5px 5px;
-    }
-    
-    .v-single-item-gallery .slick-dots li
-    {
-        margin: 0 8px;
-    }
-    
 }
 
 /*
-  ===Interiors============================================================================================================ 
+  ===Phone ?============================================================================================================== 
   ========================================================================================================================
 */
 
@@ -1315,11 +1063,20 @@ hr {
         word-spacing: -0.1em;
     }
     
+    nav.menu {
+        font: 0.96em/1.27em Courier New, monospace;
+    }
+    
+    /*Temp logo**************/
+    .templogogroup{
+        display: none;
+    }
 
     /*Links***********************/
     nav.menu a:hover {
         font-style: italic;
     }
+    
 
     /*Images***********************/
     .pdficon {
@@ -1361,6 +1118,13 @@ hr {
         -moz-border-radius: 15px;
         border-radius: 15px;
     }
+    
+    /*Logo***********************/
+    .templogogroup{
+        position: absolute;
+        width: 25%;    
+    }
+    
 }
 
 @media all and (min-width: 551px) and (max-width: 959px) {
@@ -1433,6 +1197,12 @@ hr {
         font-weight: 100;
         letter-spacing: 0.15em;
         word-spacing: -0.1em;
+    }
+    
+    /*Logo***********************/
+    .templogogroup{
+        position: absolute;
+        width: 15%;    
     }
 }
 
