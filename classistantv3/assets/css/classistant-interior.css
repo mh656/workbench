@@ -388,7 +388,7 @@ img{
     height: 100%;
     vertical-align: middle;
     
-    image-rendering: crisp-edges;
+    image-rendering: auto;
 }
 
 img.fitdiv{
